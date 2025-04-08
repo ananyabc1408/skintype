@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>Cosmetic Suggestion using CNN</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+		
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Skin Type based Cosmetic Suggestion using CNN</h1>
+    </div>
+
+   <br>
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{ user_image }}" alt="User Image" style="width:500px;height:500px;">
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        <a href="/">Home </a></h1>
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+For normal skin, you have the flexibility to choose from a wide range of cosmetics. Here are some recommendations across various categories that work well for normal skin:
+<br><h4>Cleansers</h4>
+<br>Cetaphil Daily Facial Cleanser
+<br>CeraVe Hydrating Cleanser
+<br>Neutrogena Ultra Gentle Hydrating Cleanser
+<br><h4>Toners</h4>
+<br>Thayers Alcohol-Free Witch Hazel Toner
+<br>Kiehl's Calendula Herbal Extract Alcohol-Free Toner
+<br>Pixi Glow Tonic
+<br><h4>Moisturizers</h4>
+<br>Neutrogena Hydro Boost Water Gel
+<br>CeraVe Daily Moisturizing Lotion
+<br>Clinique Moisture Surge 72-Hour Auto-Replenishing Hydrator
+<br><h4>Primers</h4>
+<br>Smashbox Photo Finish Foundation Primer
+<br>Laura Mercier Foundation Primer
+<br>e.l.f. Cosmetics Poreless Putty Primer
+<br><h4>Foundations</h4>
+<br>NARS Sheer Glow Foundation
+<br>Giorgio Armani Luminous Silk Foundation
+<br>Maybelline Fit Me Dewy + Smooth Foundation
+<br><h4>Powders</h4>
+<br>Laura Mercier Translucent Loose Setting Powder
+<br>MAC Mineralize Skinfinish Natural
+<br>Maybelline Fit Me Loose Finishing Powder
+<br><h4>Blushes</h4>
+<br>NARS Blush
+<br>Tarte Amazonian Clay 12-Hour Blush
+<br>Milani Baked Blush
+<br><h4>Setting Sprays</h4>
+<br>Urban Decay All Nighter Long-Lasting Makeup Setting Spray
+<br>MAC Prep + Prime Fix+
+<br>NYX Professional Makeup Dewy Finish Setting Spray
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

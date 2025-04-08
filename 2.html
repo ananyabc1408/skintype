@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>Cosmetic Suggestion using CNN</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+		
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Skin Type based Cosmetic Suggestion using CNN</h1>
+    </div>
+
+   <br>
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{ user_image }} " alt="User Image" style="width:500px;height:500px;">
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        <a href="/">Home </a></h1>
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+					For oily skin, it's important to choose cosmetics that can help control excess oil and minimize shine without clogging pores. Here are some suggestions for different types of cosmetics suitable for oily skin:
+<br><h4>Cleansers</h4>
+<br>Cetaphil DermaControl Oil Control Foam Wash
+<br>La Roche-Posay Effaclar Purifying Foaming Gel
+<br>Neutrogena Oil-Free Acne Wash
+<br><h4>Toners</h4>
+<br>Pixi Glow Tonic
+<br>Thayers Witch Hazel Toner
+<br>Paula’s Choice Skin Balancing Pore-Reducing Toner
+<br><h4>Moisturizers</h4>
+<br>Neutrogena Hydro Boost Water Gel
+<br>Cetaphil Pro Oil Absorbing Moisturizer
+<br>La Roche-Posay Effaclar Mat Oil-Free Mattifying Moisturizer
+<br><h4>Primers</h4>
+<br>Smashbox Photo Finish Oil & Shine Control Primer
+<br>Benefit The POREfessional Matte Rescue Primer
+<br>NYX Professional Makeup Shine Killer Primer
+<br><h4>Foundations</h4>
+<br>Estée Lauder Double Wear Stay-in-Place Makeup
+<br>Fenty Beauty Pro Filt'r Soft Matte Longwear Foundation
+<br>Maybelline Fit Me Matte + Poreless Foundation
+<br><h4>Powders</h4>
+<br>Rimmel Stay Matte Pressed Powder
+<br>Laura Mercier Translucent Loose Setting Powder
+<br>MAC Blot Powder
+<br><h4>Blushes</h4>
+<br>NARS Powder Blush
+<br>Milani Baked Blush
+<br>Tarte Amazonian Clay 12-Hour Blush
+<br><h4>Setting Sprays</h4>
+<br>Urban Decay De-Slick Oil Control Makeup Setting Spray
+<br>NYX Professional Makeup Matte Finish Setting Spray
+<br>Milani Make It Last Setting Spray
+<br><h4>Blotting Papers</h4>
+<br>Clean & Clear Oil Absorbing Sheets
+<br>Boscia Green Tea Blotting Linens
+<br>Tatcha Aburatorigami Japanese Blotting Papers                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
